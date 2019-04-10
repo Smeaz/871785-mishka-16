@@ -1,0 +1,45 @@
+.catalog__title {
+  @include h2;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.catalog__list {
+  list-style: none;
+}
+
+.catalog__item-title-link {
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.catalog__item-description {
+  font-size: 13px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.catalog__item-price {
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.catalog__add-to-cart {
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.catalog__item-card {
+  border: solid 1px #ececec;
+}

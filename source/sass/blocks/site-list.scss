@@ -4,10 +4,6 @@
   list-style: none;
 }
 
-.site-list__item {
-  margin: 10px;
-}
-
 .site-list__link {
   display: block;
   font-weight: bold;
@@ -21,7 +17,7 @@
 }
 
 .site-list__search {
-  padding: 10px;
+  padding: 5px;
   padding-left: 0;
   margin-left: 75px;
   background-color: red;
@@ -33,5 +29,9 @@
     font-weight: bold;
     line-height: 24px;
     color: #000000;
+    opacity: 1;
+  }
+  &:focus::placeholder {
+    opacity: 0;
   }
 }

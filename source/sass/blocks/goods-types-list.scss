@@ -13,8 +13,20 @@
   padding: 30px;
   &--interior {
     background-color: #63d1bb;
+    &:hover {
+      background-color: #59d5bc;
+    }
+    &:focus {
+      background-color: #59d5bc;
+    }
   }
   &--toys {
     background-color: #56c3b2;
+    &:hover {
+      background-color: #46c1ae;
+    }
+    &:focus {
+      background-color: #46c1ae;
+    }
   }
 }
