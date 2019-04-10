@@ -1,0 +1,15 @@
+@mixin h1 {
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+  color: #010000;
+  line-height: 30px;
+}
+
+@mixin h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+  line-height: 30px;
+}

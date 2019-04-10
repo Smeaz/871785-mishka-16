@@ -1,0 +1,37 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item {
+  margin: 10px;
+}
+
+.site-list__link {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #000000;
+  padding: 27px;
+  padding-left: 75px;
+  background-color: #ededed;
+  box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+}
+
+.site-list__search {
+  padding: 10px;
+  padding-left: 0;
+  margin-left: 75px;
+  background-color: red;
+  border: none;
+  background-color: #ededed;
+  box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+  &::placeholder {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000000;
+  }
+}
