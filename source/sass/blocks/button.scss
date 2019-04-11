@@ -1,18 +1,18 @@
 .button {
-  border: solid 2px #444444;
-  background-color: #ffffff;
+  border: solid 2px $base-grey;
+  background-color: inherit;
   text-transform: uppercase;
-  color: #444444;
+  color: $base-grey;
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
   padding: 15px;
   &:hover {
-    color: #ffffff;
-    background-color: #444444;
+    color: $font-white;
+    background-color: $base-grey;
   }
   &:focus {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #444444;
+    color: rgba($font-white, 0.3);
+    background-color: $base-grey;
   }
 }
