@@ -1,9 +1,10 @@
+/*Основное*/
 @import "general/normalize.scss";
 @import "general/fonts.scss";
 @import "general/variables.scss";
 @import "general/mixins.scss";
 @import "general/common.scss";
-
+/*Блоки*/
 @import "blocks/about-us.scss";
 @import "blocks/button.scss";
 @import "blocks/catalog.scss";

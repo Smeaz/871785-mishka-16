@@ -11,20 +11,26 @@
   line-height: 24px;
   color: #ffffff;
   padding: 30px;
+
   &--interior {
     background-color: $base-green;
+
     &:hover {
       background-color: #59d5bc;
     }
+
     &:focus {
       background-color: #59d5bc;
     }
   }
+
   &--toys {
     background-color: #56c3b2;
+
     &:hover {
       background-color: #46c1ae;
     }
+
     &:focus {
       background-color: #46c1ae;
     }

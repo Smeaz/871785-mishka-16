@@ -1,6 +1,7 @@
 .top-of-the-week__title {
   @include h2;
   position: relative;
+
   &::after {
     content: "Товар недели";
     position: absolute;
