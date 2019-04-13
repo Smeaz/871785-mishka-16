@@ -1,0 +1,11 @@
+.about-us__title {
+  @include h2;
+}
+
+.about-us__list {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $font-black;
+  list-style: none;
+}

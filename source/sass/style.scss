@@ -1,0 +1,21 @@
+/*Основное*/
+@import "general/normalize.scss";
+@import "general/fonts.scss";
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/common.scss";
+/*Блоки*/
+@import "blocks/about-us.scss";
+@import "blocks/button.scss";
+@import "blocks/catalog.scss";
+@import "blocks/copyright.scss";
+@import "blocks/goods-types-list.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/start-screen.scss";
+@import "blocks/site-list.scss";
+@import "blocks/social.scss";
+@import "blocks/top-of-the-week.scss";

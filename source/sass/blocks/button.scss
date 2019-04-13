@@ -1,0 +1,20 @@
+.button {
+  border: solid 2px $base-grey;
+  background-color: inherit;
+  text-transform: uppercase;
+  color: $base-grey;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 15px;
+
+  &:hover {
+    color: $font-white;
+    background-color: $base-grey;
+  }
+
+  &:focus {
+    color: rgba($font-white, 0.3);
+    background-color: $base-grey;
+  }
+}
