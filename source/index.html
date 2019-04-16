@@ -2,14 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="logo page-header__logo">
-        <img class="logo__image" src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
-      </a>
+      <section class="page-header__logo">
+        <a class="logo">
+          <img class="logo__image" src="http://placehold.it/86x35" width="86" height="35" alt="Интернет-магазин «Мишка»">
+        </a>
+      </section>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list visually-hidden">
@@ -30,7 +33,7 @@
     </header>
     <main class="page-main">
       <section class="start-screen">
-        <h1 class="start-screen__title">Милые штуки ручной работы для дома</h1>
+        <h1 class="start-screen__title">Милые штуки ручной<br>работы для дома</h1>
         <ul class="goods-types-list">
           <li class="goods-types-list__item">
             <a class="goods-types-list__button goods-types-list__button--interior" href="interior-items.html">Предметы<br>интерьера</a>
@@ -42,24 +45,26 @@
       </section>
       <section class="top-of-the-week">
         <h2 class="top-of-the-week__title">Вязаные корзинки</h2>
-        <p class="top-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="top-of-the-week__properties">
-          <tr class="top-of-the-week__property">
-            <th class="top-of-the-week__property-title">Цвет:</th>
-            <td>«Тиффани»/серый</td>
-          </tr>
-          <tr class="top-of-the-week__property">
-            <th class="top-of-the-week__property-title">Диаметр:</th>
-            <td>25 см</td>
-          </tr>
-          <tr class="top-of-the-week__property">
-            <th class="top-of-the-week__property-title">Высота:</th>
-            <td>15 см</td>
-          </tr>
-        </table>
-        <img src="http://placehold.it/260x315" class="top-of-the-week__picture" width="260" height="315" alt="Корзинки">
-        <span class="top-of-the-week__price">Цена: 990 руб.</span>
-        <button class="top-of-the-week__button button">Заказать</button>
+        <section class="top-of-the-week__item-card">
+          <p class="top-of-the-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="top-of-the-week__properties">
+            <tr class="top-of-the-week__property">
+              <th class="top-of-the-week__property-title">Цвет:</th>
+              <td>«Тиффани»/серый</td>
+            </tr>
+            <tr class="top-of-the-week__property">
+              <th class="top-of-the-week__property-title">Диаметр:</th>
+              <td>25 см</td>
+            </tr>
+            <tr class="top-of-the-week__property">
+              <th class="top-of-the-week__property-title">Высота:</th>
+              <td>15 см</td>
+            </tr>
+          </table>
+          <img class="top-of-the-week__picture" src="http://placehold.it/260x315" width="260" height="315" alt="Корзинки">
+          <span class="top-of-the-week__price">Цена: 990 руб.</span>
+          <button class="top-of-the-week__button button">Заказать</button>
+        </section>
       </section>
       <section class="about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>

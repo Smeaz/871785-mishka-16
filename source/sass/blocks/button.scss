@@ -1,6 +1,7 @@
 .button {
+  display: block;
   border: solid 2px $base-grey;
-  background-color: inherit;
+  background-color: transparent;
   text-transform: uppercase;
   color: $base-grey;
   font-size: 17px;

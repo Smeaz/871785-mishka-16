@@ -1,5 +1,5 @@
 .catalog__title {
-  @include h2;
+  @include main-h2;
   background-color: #f1f1f1;
   text-align: center;
   padding-top: 75px;
@@ -7,7 +7,7 @@
 }
 
 .catalog__list {
-  list-style: none;
+  @include list-reset;
 }
 
 .catalog__item-title-link {

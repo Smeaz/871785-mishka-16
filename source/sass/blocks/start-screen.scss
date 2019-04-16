@@ -5,6 +5,15 @@
 }
 
 .start-screen__title {
-  @include h1;
+  @include main-h1;
   margin-bottom: 120px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .start-screen__title {
+    width: 500px;
+  }
 }

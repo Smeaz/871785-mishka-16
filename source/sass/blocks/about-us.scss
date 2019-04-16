@@ -1,5 +1,9 @@
+.about-us {
+  @include mobile-padding;
+}
+
 .about-us__title {
-  @include h2;
+  @include main-h2;
 }
 
 .about-us__list {
@@ -7,5 +11,5 @@
   line-height: 20px;
   font-weight: bold;
   color: $font-black;
-  list-style: none;
+  @include list-reset;
 }
