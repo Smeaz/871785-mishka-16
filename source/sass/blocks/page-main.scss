@@ -1,1 +1,11 @@
-/* stylelint-disable */
+.page-main__after-header {
+  display: none;
+  position: absolute;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__after-header {
+    display: flex;
+    @include tablet-margin;
+  }
+}

@@ -1,5 +1,5 @@
 .about-us {
-  @include mobile-padding;
+  @include mobile-margin;
 }
 
 .about-us__title {
@@ -12,4 +12,136 @@
   font-weight: bold;
   color: $font-black;
   @include list-reset;
+}
+
+.about-us__item {
+  position: relative;
+  margin-top: 90px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  &--eco {
+    width: 175px;
+
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+      width: 31.972px;
+      height: 37.301px;
+      top: -52px;
+      left: 9px;
+    }
+  }
+
+  &--money {
+    width: 200px;
+
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+      width: 46.575px;
+      height: 27.332px;
+      top: -50px;
+    }
+  }
+
+  &--heart {
+    width: 180px;
+
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+      width: 33.05px;
+      height: 27.857px;
+      top: -45px;
+      left: 8px;
+    }
+  }
+
+  &--ball {
+    width: 210px;
+
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+      width: 34.373px;
+      height: 34.373px;
+      top: -49px;
+      left: 3px;
+    }
+  }
+
+  &--jet {
+    width: 250px;
+
+    &::before {
+      background-image: url("../img/icon-feature-rocket.svg");
+      width: 54.156px;
+      height: 23.183px;
+      top: -48px;
+      left: -7px;
+    }
+  }
+
+  &--gift {
+    width: 200px;
+
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+      width: 32.666px;
+      height: 32.486px;
+      top: -50px;
+      left: 2px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    @include tablet-margin;
+  }
+
+  .about-us__lists {
+    display: flex;
+  }
+
+  .about-us__list {
+    font-size: 20px;
+    line-height: 22px;
+
+    &--column-2 {
+      padding-left: 61px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .about-us__item {
+    margin-top: 110px;
+
+    &--eco {
+      width: 205px;
+    }
+
+    &--money {
+      width: 235px;
+    }
+
+    &--heart {
+      width: 215px;
+    }
+
+    &--ball {
+      width: 250px;
+    }
+
+    &--jet {
+      width: 295px;
+    }
+
+    &--gift {
+      width: 235px;
+    }
+  }
 }

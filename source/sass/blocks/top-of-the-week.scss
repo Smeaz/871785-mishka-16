@@ -1,5 +1,5 @@
 .top-of-the-week {
-  @include mobile-padding;
+  @include mobile-margin;
   display: flex;
   flex-direction: column;
 }
@@ -48,7 +48,8 @@
 
 @media (min-width: $tablet-width) {
   .top-of-the-week {
-    @include tablet-padding;
+    min-height: 500px;
+    @include tablet-margin;
   }
 
   .top-of-the-week__item-card {
