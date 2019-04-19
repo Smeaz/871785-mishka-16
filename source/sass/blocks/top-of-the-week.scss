@@ -49,6 +49,7 @@
 @media (min-width: $tablet-width) {
   .top-of-the-week {
     min-height: 500px;
+
     @include tablet-margin;
   }
 

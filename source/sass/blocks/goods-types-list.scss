@@ -82,6 +82,7 @@
 @media (min-width: $tablet-width) {
   .goods-types-list {
     flex-direction: row;
+
     @include tablet-margin;
   }
 

@@ -6,10 +6,11 @@
 
 .site-list__item {
   background-color: $base-background;
+
   @include block-shadow;
 
   &--cart {
-    background: url("../img/icon-cart.svg"), rgba(255,255,255,0.8);
+    background: url("../img/icon-cart.svg"), rgba(255, 255, 255, 0.8);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 30px;
@@ -49,7 +50,7 @@
   top: 34px;
   width: 18px;
   height: 18px;
-  background: url("../img/icon-search.svg"), rgba(255,255,255,0.8);
+  background: url("../img/icon-search.svg"), rgba(255, 255, 255, 0.8);
   background-blend-mode: color;
   background-repeat: no-repeat;
   background-position: center;
