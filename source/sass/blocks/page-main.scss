@@ -1,1 +1,6 @@
-/* stylelint-disable */
+@media (min-width: $tablet-width) {
+  .page-main {
+    @include block-shadow-top;
+    padding-top: 1px;
+  }
+}

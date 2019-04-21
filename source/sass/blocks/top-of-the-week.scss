@@ -1,7 +1,11 @@
 .top-of-the-week {
-  @include mobile-margin;
   display: flex;
   flex-direction: column;
+  padding-top: 50px;
+}
+
+.top-of-the-week__wrapper {
+  @include wrapper;
 }
 
 .top-of-the-week__item-card {
@@ -15,6 +19,7 @@
   position: relative;
   align-self: flex-start;
   width: 100%;
+  margin-top: 0;
 
   &::after {
     content: "Товар недели";
@@ -49,8 +54,6 @@
 @media (min-width: $tablet-width) {
   .top-of-the-week {
     min-height: 500px;
-
-    @include tablet-margin;
   }
 
   .top-of-the-week__item-card {

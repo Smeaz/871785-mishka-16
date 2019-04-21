@@ -82,7 +82,7 @@
   }
 
   .site-list__item {
-    @include block-shadow-bottom-left;
+    @include block-shadow-left;
 
     &--catalog {
       display: none;
