@@ -1,15 +1,66 @@
-@mixin h1 {
+@mixin main-h1 {
+  font-family: $base-font;
   font-size: 27px;
   font-weight: bold;
   text-align: center;
   color: #010000;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    color: $font-black;
+  }
 }
 
-@mixin h2 {
+@mixin main-h2 {
+  font-family: $base-font;
   font-size: 25px;
   font-weight: bold;
   text-align: left;
   color: $font-black;
   line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    color: $font-black;
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin block-shadow {
+  box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
+}
+
+@mixin block-shadow-left {
+  box-shadow: -1px 0 0 0 #ececec;
+}
+
+@mixin block-shadow-top {
+  box-shadow: inset 0 1px 0 0 #ececec;
+}
+
+@mixin pseudo-icon {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@mixin wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

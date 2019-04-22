@@ -1,38 +1,90 @@
 .goods-types-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
 }
 
 .goods-types-list__button {
   display: block;
+  position: relative;
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
   color: #ffffff;
   padding: 30px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 90%;
 
   &--interior {
     background-color: $base-green;
 
+    &::after {
+      content: url("../img/icon-interior.svg");
+      position: absolute;
+      top: 22px;
+      right: 30px;
+      opacity: 0.5;
+    }
+
     &:hover {
       background-color: #59d5bc;
+      padding-bottom: 35px;
+      margin-top: -5px;
+
+      &::after {
+        opacity: 0.7;
+      }
     }
 
     &:focus {
       background-color: #59d5bc;
+      color: rgba(255, 255, 255, 0.3);
+
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 
   &--toys {
     background-color: #56c3b2;
 
+    &::after {
+      content: url("../img/icon-toy.svg");
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      opacity: 0.5;
+    }
+
     &:hover {
       background-color: #46c1ae;
+      padding-bottom: 35px;
+      margin-top: -5px;
+
+      &::after {
+        opacity: 0.7;
+      }
     }
 
     &:focus {
       background-color: #46c1ae;
+      color: rgba(255, 255, 255, 0.3);
+
+      &::after {
+        opacity: 0.3;
+      }
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .goods-types-list {
+    flex-direction: row;
+  }
+
+  .goods-types-list__item {
+    width: 50%;
   }
 }

@@ -1,5 +1,9 @@
 .about-us__title {
-  @include h2;
+  @include main-h2;
+}
+
+.about-us__wrapper {
+  @include wrapper;
 }
 
 .about-us__list {
@@ -7,5 +11,98 @@
   line-height: 20px;
   font-weight: bold;
   color: $font-black;
-  list-style: none;
+
+  @include list-reset;
+}
+
+.about-us__item {
+  position: relative;
+  margin-top: 90px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  &--eco {
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+      width: 31.972px;
+      height: 37.301px;
+      top: -52px;
+      left: 9px;
+    }
+  }
+
+  &--money {
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+      width: 46.575px;
+      height: 27.332px;
+      top: -50px;
+    }
+  }
+
+  &--heart {
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+      width: 33.05px;
+      height: 27.857px;
+      top: -45px;
+      left: 8px;
+    }
+  }
+
+  &--ball {
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+      width: 34.373px;
+      height: 34.373px;
+      top: -49px;
+      left: 3px;
+    }
+  }
+
+  &--jet {
+    &::before {
+      background-image: url("../img/icon-feature-rocket.svg");
+      width: 54.156px;
+      height: 23.183px;
+      top: -48px;
+      left: -7px;
+    }
+  }
+
+  &--gift {
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+      width: 32.666px;
+      height: 32.486px;
+      top: -50px;
+      left: 2px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-us__lists {
+    display: flex;
+  }
+
+  .about-us__list {
+    font-size: 20px;
+    line-height: 22px;
+
+    &--column-2 {
+      padding-left: 61px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .about-us__item {
+    margin-top: 110px;
+  }
 }

@@ -2,4 +2,18 @@
   font-size: 0;
   background-color: transparent;
   border: none;
+  position: absolute;
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  right: 30px;
+  top: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
 }
