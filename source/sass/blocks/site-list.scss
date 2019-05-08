@@ -41,6 +41,10 @@
   &:focus {
     color: rgba($font-black, 0.3);
   }
+
+  &--catalog {
+    display: inline;
+  }
 }
 
 .site-list__search-label {
@@ -82,10 +86,13 @@
   }
 
   .site-list__item {
-    @include block-shadow-left;
+    border-left: 1px solid $shadow;
+    box-shadow: none;
 
     &--catalog {
-      display: none;
+      position: absolute;
+      left: 0;
+      display: block;
     }
 
     &--knitting {
@@ -95,7 +102,6 @@
     &--search {
       height: 90px;
       width: 83px;
-      margin-right: 1px;
       background-position-x: center;
     }
 

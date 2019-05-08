@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 1px 0 0 #e6e6e6;
 }
 
 .copyright__text {
@@ -16,7 +15,6 @@
 
 @media (min-width: $tablet-width) {
   .copyright {
-    box-shadow: none;
     margin: 0;
     justify-content: flex-end;
   }
