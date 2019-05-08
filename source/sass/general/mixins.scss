@@ -11,6 +11,11 @@
     line-height: 50px;
     color: $font-black;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 @mixin main-h2 {
@@ -24,7 +29,11 @@
   @media (min-width: $tablet-width) {
     font-size: 43px;
     line-height: 50px;
-    color: $font-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -36,10 +45,6 @@
 
 @mixin block-shadow {
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
-}
-
-@mixin block-shadow-left {
-  box-shadow: -1px 0 0 0 #ececec;
 }
 
 @mixin block-shadow-top {
