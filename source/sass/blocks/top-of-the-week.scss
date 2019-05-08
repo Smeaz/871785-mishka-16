@@ -1,11 +1,12 @@
 .top-of-the-week {
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .top-of-the-week__wrapper {
   @include wrapper;
+  position: relative;
 }
 
 .top-of-the-week__item-card {
@@ -19,18 +20,15 @@
   position: relative;
   align-self: flex-start;
   width: 100%;
-  margin-top: 0;
+  margin: 0;
+}
 
-  &::after {
-    content: "Товар недели";
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    text-transform: uppercase;
-    font-size: 17px;
-    color: $base-green;
-    line-height: 20px;
-  }
+.top-of-the-week__item-top {
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 20px;
+  color: $base-green;
+  padding-top: 8px;
 }
 
 .top-of-the-week__property-title {
@@ -53,27 +51,34 @@
 
 @media (min-width: $tablet-width) {
   .top-of-the-week {
+    padding-top: 55px;
     min-height: 500px;
+  }
+
+  .top-of-the-week__item-top {
+    display: block;
+    position: absolute;
+    line-height: 17px;
+    text-align: center;
+    width: 70px;
+    padding: 0;
+    right: 80px;
+    top: 14px;
   }
 
   .top-of-the-week__item-card {
     padding-right: 400px;
   }
 
-  .top-of-the-week__title::after {
-    display: block;
-    width: 70px;
-    line-height: 17px;
-    text-align: center;
-    position: absolute;
-    right: 30px;
-    left: auto;
-    bottom: 3px;
-  }
-
   .top-of-the-week__picture {
     position: absolute;
     right: 0;
     top: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .top-of-the-week {
+    padding-top: 70px;
   }
 }

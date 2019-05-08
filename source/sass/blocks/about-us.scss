@@ -6,6 +6,10 @@
   @include wrapper;
 }
 
+.about-us__lists {
+  padding-bottom: 60px;
+}
+
 .about-us__list {
   font-size: 17px;
   line-height: 20px;
@@ -89,6 +93,7 @@
 @media (min-width: $tablet-width) {
   .about-us__lists {
     display: flex;
+    padding-bottom: 80px;
   }
 
   .about-us__list {
@@ -104,5 +109,11 @@
 
   .about-us__item {
     margin-top: 110px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us__lists {
+    padding-bottom: 90px;
   }
 }

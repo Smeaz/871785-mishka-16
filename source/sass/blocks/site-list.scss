@@ -82,7 +82,8 @@
   }
 
   .site-list__item {
-    @include block-shadow-left;
+    border-left: 1px solid $shadow;
+    box-shadow: none;
 
     &--catalog {
       display: none;
@@ -95,7 +96,6 @@
     &--search {
       height: 90px;
       width: 83px;
-      margin-right: 1px;
       background-position-x: center;
     }
 

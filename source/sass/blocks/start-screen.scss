@@ -23,3 +23,9 @@
     width: 500px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .start-screen__title {
+    width: 615px;
+  }
+}
