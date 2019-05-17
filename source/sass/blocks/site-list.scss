@@ -23,6 +23,11 @@
     align-items: center;
     height: 80px;
   }
+
+  &--sale,
+  &--new {
+    display: none;
+  }
 }
 
 .site-list__link {
@@ -40,10 +45,6 @@
 
   &:focus {
     color: rgba($font-black, 0.3);
-  }
-
-  &--catalog {
-    display: inline;
   }
 }
 
@@ -89,24 +90,19 @@
     border-left: 1px solid $shadow;
     box-shadow: none;
 
-    &--catalog {
-      position: absolute;
-      left: 0;
-      display: block;
-    }
-
-    &--knitting {
-      display: none;
-    }
-
     &--search {
       height: 90px;
       width: 83px;
       background-position-x: center;
     }
+  }
+
+  .site-list__link {
+    padding: 0;
+    line-height: 90px;
 
     &--cart {
-      padding-right: 50px;
+      padding-left: 83px;
     }
   }
 
@@ -118,10 +114,88 @@
       color: transparent;
     }
   }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .site-list__item {
+    &--catalog,
+    &--knitting {
+      position: absolute;
+      border: none;
+      display: block;
+      left: 50px;
+    }
+  }
 
   .site-list__link {
-    &--cart {
-      line-height: 90px;
+
+    &--catalog {
+      line-height: 24px;
+      font-size: 15px;
+      position: absolute;
+      top: 110px;
+      padding: 0;
+    }
+
+    &--knitting {
+      font-size: 15px;
+      line-height: 24px;
+      position: absolute;
+      top: 110px;
+      padding: 0;
+      left: 184px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__item {
+    position: relative;
+    left: 0;
+
+    &--new,
+    &--sale {
+      position: relative;
+      border: none;
+      display: block;
+      left: 50px;
+    }
+
+    &--knitting {
+      margin-right: auto;
+    }
+
+    &--catalog {
+      border-left: none;
+    }
+  }
+
+  .site-list__link {
+    left: -750px;
+
+    &--catalog {
+      padding-right: 35px;
+    }
+
+    &--knitting {
+      padding-left: 35px;
+    }
+
+    &--new {
+      line-height: 24px;
+      font-size: 15px;
+      position: absolute;
+      top: 110px;
+      padding: 0;
+    }
+
+    &--sale {
+      line-height: 24px;
+      font-size: 15px;
+      position: absolute;
+      top: 110px;
+      padding: 0;
+      left: -531px;
     }
   }
 }

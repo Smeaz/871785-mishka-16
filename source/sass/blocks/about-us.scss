@@ -113,6 +113,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .about-us__wrapper {
+    width: 700px;
+  }
+
   .about-us__lists {
     padding-bottom: 90px;
   }

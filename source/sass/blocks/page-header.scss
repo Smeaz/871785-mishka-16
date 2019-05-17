@@ -7,15 +7,36 @@
   @include block-shadow;
 }
 
+.page-header__delivery-info {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .page-header__wrapper {
     @include wrapper;
     display: flex;
+    position: relative;
   }
 
   .page-header__logo {
     height: 90px;
     justify-content: flex-start;
     box-shadow: none;
+  }
+
+  .page-header__delivery-info {
+    display: inline;
+    position: absolute;
+    right: 50px;
+    top: 110px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    position: absolute;
+    width: auto;
+    left: 50%;
+    margin-left: -75px;
   }
 }

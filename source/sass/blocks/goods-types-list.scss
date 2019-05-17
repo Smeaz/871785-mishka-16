@@ -2,6 +2,11 @@
   @include list-reset;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 1150px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .goods-types-list__button {
@@ -86,5 +91,16 @@
 
   .goods-types-list__item {
     width: 50%;
+  }
+
+  .goods-types-list__button {
+
+    &--interior {
+      margin-left: 50px;
+    }
+
+    &--toys {
+      margin-right: 50px;
+    }
   }
 }
