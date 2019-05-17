@@ -16,6 +16,7 @@
     @include wrapper;
     display: flex;
     position: relative;
+    z-index: 2;
   }
 
   .page-header__logo {
