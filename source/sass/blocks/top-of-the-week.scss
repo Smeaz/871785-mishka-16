@@ -1,9 +1,9 @@
 .top-of-the-week {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 29px;
   padding-bottom: 40px;
-  background-image: url(../img/bg-zigzag-line.svg);
+  background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position-y: bottom;
   background-size: auto 6px;
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 30px;
+  padding-top: 21px;
   min-height: 412px;
 }
 
@@ -41,13 +41,17 @@
 .top-of-the-week__properties {
   border-collapse: collapse;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .top-of-the-week__properties th,
 .top-of-the-week__properties td {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.top-of-the-week__properties td {
+  padding-left: 15px;
 }
 
 .top-of-the-week__property-title {
@@ -57,7 +61,7 @@
 
 .top-of-the-week__description {
   margin-top: 0;
-  margin-bottom: 49px;
+  margin-bottom: 16px;
 }
 
 .top-of-the-week__property {
@@ -75,17 +79,16 @@
   font-weight: bold;
   color: $base-grey;
   align-self: center;
-  margin-bottom: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 26px;
 }
 
 @media (min-width: $tablet-width) {
   .top-of-the-week {
-    padding-top: 55px;
+    padding-top: 50px;
     min-height: 500px;
     background-size: auto 15px;
-    padding-bottom: 60px;
+    padding-bottom: 68px;
   }
 
   .top-of-the-week__item-top {
@@ -95,23 +98,29 @@
     text-align: center;
     width: 70px;
     padding: 0;
-    right: 80px;
-    top: 14px;
+    right: 79px;
+    top: 11px;
   }
 
   .top-of-the-week__item-card {
     padding-right: 376px;
+    padding-top: 46px;
   }
 
   .top-of-the-week__description {
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 34px;
+  }
+
+  .top-of-the-week__properties td {
+    padding-left: 0;
   }
 
   .top-of-the-week__picture {
     position: absolute;
     right: 0;
-    top: 37px;
+    top: 54px;
     width: auto;
     height: auto;
   }
@@ -119,6 +128,7 @@
   .top-of-the-week__price {
     font-size: 20px;
     line-height: 24px;
+    margin-top: 30px;
   }
 
   .top-of-the-week__button {
@@ -128,16 +138,17 @@
 
 @media (min-width: $desktop-width) {
   .top-of-the-week {
-    padding-top: 127px;
+    padding-top: 128px;
     background-size: auto 23px;
-    padding-bottom: 100px;
+    padding-bottom: 95px;
     width: 1050px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .top-of-the-week__item-top {
-    left: -74px;
+    left: -78px;
+    top: 15px;
   }
 
   .top-of-the-week__item-card {
@@ -145,13 +156,18 @@
     padding-right: 409px;
   }
 
+  .top-of-the-week__description {
+    margin-bottom: 47px;
+  }
+
   .top-of-the-week__price {
-    margin-top: 110px;
+    margin-top: 83px;
+    margin-bottom: 34px;
   }
 
   .top-of-the-week__picture {
     right: -175px;
-    top: -116px;
+    top: -112px;
     z-index: -1;
   }
 }

@@ -16,7 +16,7 @@
   font-weight: bold;
   line-height: 24px;
   color: #ffffff;
-  padding: 30px;
+  padding: 27px;
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 90%;
@@ -28,13 +28,13 @@
       content: url("../img/icon-interior.svg");
       position: absolute;
       top: 22px;
-      right: 30px;
+      right: 36px;
       opacity: 0.5;
     }
 
     &:hover {
       background-color: #59d5bc;
-      padding-bottom: 35px;
+      border-bottom: 5px solid #59d5bc;
       margin-top: -5px;
 
       &::after {
@@ -59,13 +59,13 @@
       content: url("../img/icon-toy.svg");
       position: absolute;
       top: 22px;
-      right: 20px;
+      right: 27px;
       opacity: 0.5;
     }
 
     &:hover {
       background-color: #46c1ae;
-      padding-bottom: 35px;
+      border-bottom: 5px solid #46c1ae;
       margin-top: -5px;
 
       &::after {
@@ -94,13 +94,25 @@
   }
 
   .goods-types-list__button {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 35px;
 
     &--interior {
       margin-left: 50px;
+
+      &::after {
+        top: 30px;
+      }
     }
 
     &--toys {
       margin-right: 50px;
+
+      &::after {
+        top: 32px;
+        right: 34px;
+      }
     }
   }
 }
