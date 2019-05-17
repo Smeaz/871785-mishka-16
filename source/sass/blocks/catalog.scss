@@ -1,9 +1,8 @@
 .catalog__title {
-  @include main-h2;
+  @include main-h1;
   background-color: #f1f1f1;
-  text-align: center;
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding-top: 71px;
+  padding-bottom: 76px;
   margin: 0;
 }
 
@@ -24,6 +23,7 @@
 
 .catalog__item-title {
   margin: 0;
+  margin-bottom: 6px;
 }
 
 .catalog__item-title-link {
@@ -44,11 +44,21 @@
   display: flex;
 }
 
+.catalog__item-image {
+  width: 100%;
+}
+
 .catalog__item-description {
   font-size: 13px;
   line-height: 30px;
   color: $base-grey;
   margin: 0;
+  padding-bottom: 19px;
+  border-bottom: 1px solid $shadow;
+}
+
+.catalog__item-buy {
+  padding-top: 21px;
 }
 
 .catalog__item-price {
@@ -67,7 +77,8 @@
 .catalog__item-card {
   border: solid 1px $shadow;
   order: 1;
-  padding: 30px;
+  padding: 27px;
+  padding-top: 17px;
 }
 
 @media (min-width: $tablet-width) {
