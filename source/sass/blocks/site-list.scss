@@ -13,7 +13,7 @@
     background: url("../img/icon-cart.svg"), rgba(255, 255, 255, 0.8);
     background-repeat: no-repeat;
     background-position-y: center;
-    background-position-x: 30px;
+    background-position-x: 31px;
     background-blend-mode: color;
   }
 
@@ -51,8 +51,8 @@
 .site-list__search-label {
   display: block;
   position: absolute;
-  left: 32px;
-  top: 34px;
+  left: 34px;
+  top: 36px;
   width: 18px;
   height: 18px;
   background: url("../img/icon-search.svg"), rgba(255, 255, 255, 0.8);
@@ -91,7 +91,7 @@
     box-shadow: none;
 
     &--search {
-      height: 90px;
+      height: 88px;
       width: 83px;
       background-position-x: center;
     }
@@ -99,10 +99,10 @@
 
   .site-list__link {
     padding: 0;
-    line-height: 90px;
+    line-height: 88px;
 
     &--cart {
-      padding-left: 83px;
+      padding-left: 84px;
     }
   }
 
@@ -133,7 +133,7 @@
       line-height: 24px;
       font-size: 15px;
       position: absolute;
-      top: 110px;
+      top: 106px;
       padding: 0;
     }
 
@@ -141,9 +141,9 @@
       font-size: 15px;
       line-height: 24px;
       position: absolute;
-      top: 110px;
+      top: 106px;
       padding: 0;
-      left: 184px;
+      left: 167px;
     }
   }
 }
@@ -185,7 +185,7 @@
       line-height: 24px;
       font-size: 15px;
       position: absolute;
-      top: 110px;
+      top: 107px;
       padding: 0;
     }
 
@@ -193,7 +193,7 @@
       line-height: 24px;
       font-size: 15px;
       position: absolute;
-      top: 110px;
+      top: 107px;
       padding: 0;
       left: -531px;
     }

@@ -20,16 +20,17 @@
   }
 
   .page-header__logo {
-    height: 90px;
+    height: 79px;
     justify-content: flex-start;
     box-shadow: none;
+    padding-top: 9px;
   }
 
   .page-header__delivery-info {
     display: inline;
     position: absolute;
-    right: 50px;
-    top: 110px;
+    right: 51px;
+    top: 106px;
   }
 }
 
