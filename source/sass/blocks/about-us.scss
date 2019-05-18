@@ -1,9 +1,18 @@
+.about-us {
+  padding-top: 29px;
+}
+
 .about-us__title {
   @include main-h2;
+  margin: 0;
 }
 
 .about-us__wrapper {
   @include wrapper;
+}
+
+.about-us__lists {
+  padding-bottom: 60px;
 }
 
 .about-us__list {
@@ -17,7 +26,7 @@
 
 .about-us__item {
   position: relative;
-  margin-top: 90px;
+  margin-top: 83px;
 
   &::before {
     content: "";
@@ -87,8 +96,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about-us {
+    padding-top: 50px;
+  }
+
   .about-us__lists {
     display: flex;
+    padding-bottom: 80px;
+    margin-top: -9px;
   }
 
   .about-us__list {
@@ -103,6 +118,20 @@
   }
 
   .about-us__item {
-    margin-top: 110px;
+    margin-top: 111px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    padding-top: 59px;
+  }
+
+  .about-us__wrapper {
+    width: 700px;
+  }
+
+  .about-us__lists {
+    padding-bottom: 90px;
   }
 }

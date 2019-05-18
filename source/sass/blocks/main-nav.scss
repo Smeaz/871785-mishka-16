@@ -17,3 +17,9 @@
     display: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 1150px;
+  }
+}
