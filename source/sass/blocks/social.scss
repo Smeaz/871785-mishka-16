@@ -17,4 +17,12 @@
 
 .social__link {
   display: flex;
+
+  &:hover path {
+    fill: $base-green-2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

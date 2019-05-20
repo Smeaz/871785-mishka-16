@@ -51,6 +51,14 @@
 
   .page-footer__logo-link {
     display: flex;
+
+    &[href="index.html"]:hover path {
+      fill: $base-green-2;
+    }
+
+    &[href="index.html"]:active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__social {

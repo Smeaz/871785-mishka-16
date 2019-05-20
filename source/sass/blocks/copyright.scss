@@ -4,13 +4,25 @@
   align-items: center;
 }
 
+.copyright__link {
+  display: flex;
+
+  &:hover path,
+  &:focus path {
+    fill: $base-green-2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .copyright__text {
   font-size: 19px;
-  line-height: 18px;
+  line-height: 34.09px;
   font-weight: bold;
   color: $font-black;
   margin-right: 30px;
-  margin-bottom: 10px;
 }
 
 @media (min-width: $tablet-width) {
