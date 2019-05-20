@@ -3,12 +3,17 @@
   display: flex;
   justify-content: center;
   height: 80px;
-
-  @include block-shadow;
 }
 
 .page-header__delivery-info {
   display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header__logo {
+    @include block-shadow-top;
+    @include block-shadow-bottom;
+  }
 }
 
 @media (min-width: $tablet-width) {

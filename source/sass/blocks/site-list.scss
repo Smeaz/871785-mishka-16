@@ -7,7 +7,7 @@
 .site-list__item {
   background-color: $base-background;
 
-  @include block-shadow;
+  @include block-shadow-bottom;
 
   &--cart {
     background: url("../img/icon-cart.svg"), rgba(255, 255, 255, 0.8);
@@ -87,6 +87,7 @@
   }
 
   .site-list__item {
+    border: none;
     border-left: 1px solid $shadow;
     box-shadow: none;
 
