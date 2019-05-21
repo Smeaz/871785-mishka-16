@@ -15,10 +15,14 @@
   margin-right: 20px;
 }
 
+.social__link svg {
+  fill: #231f20;
+}
+
 .social__link {
   display: flex;
 
-  &:hover path {
+  &:hover svg {
     fill: $base-green-2;
   }
 
