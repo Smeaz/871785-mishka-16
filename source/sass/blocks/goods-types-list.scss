@@ -64,8 +64,8 @@
     }
 
     &:hover {
-      background-color: #46c1ae;
-      border-bottom: 5px solid #46c1ae;
+      background-color: $base-green-2;
+      border-bottom: 5px solid $base-green-2;
       margin-top: -5px;
 
       &::after {
@@ -74,7 +74,7 @@
     }
 
     &:focus {
-      background-color: #46c1ae;
+      background-color: $base-green-2;
       color: rgba(255, 255, 255, 0.3);
 
       &::after {

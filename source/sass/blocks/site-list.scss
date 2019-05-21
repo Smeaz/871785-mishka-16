@@ -7,15 +7,7 @@
 .site-list__item {
   background-color: $base-background;
 
-  @include block-shadow;
-
-  &--cart {
-    background: url("../img/icon-cart.svg"), rgba(255, 255, 255, 0.8);
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 31px;
-    background-blend-mode: color;
-  }
+  @include block-shadow-bottom;
 
   &--search {
     display: flex;
@@ -43,9 +35,28 @@
     color: rgba($font-black, 0.6);
   }
 
-  &:focus {
-    color: rgba($font-black, 0.3);
+  &--cart {
+    position: relative;
   }
+
+  &--cart:hover path {
+    opacity: 1;
+    fill: $base-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-list__link path {
+  opacity: 0.2;
+}
+
+.site-list__link svg {
+  position: absolute;
+  top: 34px;
+  left: 30px;
 }
 
 .site-list__search-label {
@@ -53,12 +64,12 @@
   position: absolute;
   left: 34px;
   top: 36px;
-  width: 18px;
-  height: 18px;
-  background: url("../img/icon-search.svg"), rgba(255, 255, 255, 0.8);
-  background-blend-mode: color;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 17.6px;
+  height: 17.6px;
+}
+
+.site-list__search-label path {
+  opacity: 0.2;
 }
 
 .site-list__search-input {
@@ -68,6 +79,17 @@
   border: none;
   background-color: transparent;
 
+  &:hover ~ .site-list__search-label path,
+  &:focus ~ .site-list__search-label path {
+    opacity: 1;
+    fill: $base-green;
+  }
+
+  &:active ~ .site-list__search-label path {
+    opacity: 0.3;
+    fill: $base-green;
+  }
+
   &::placeholder {
     font-size: 17px;
     font-weight: bold;
@@ -76,8 +98,22 @@
     opacity: 1;
   }
 
+  &:hover::placeholder {
+    opacity: 0.3;
+  }
+
   &:focus::placeholder {
     opacity: 0;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .site-list__search-label {
+    top: 32px;
+  }
+
+  .site-list__link--cart svg {
+    top: 32px;
   }
 }
 
@@ -87,6 +123,7 @@
   }
 
   .site-list__item {
+    border: none;
     border-left: 1px solid $shadow;
     box-shadow: none;
 
@@ -171,6 +208,10 @@
 
   .site-list__link {
     left: -750px;
+
+    &--cart {
+      position: static;
+    }
 
     &--catalog {
       padding-right: 35px;
