@@ -1,7 +1,7 @@
 .catalog__title {
   @include main-h1;
   background-color: #f1f1f1;
-  padding-top: 71px;
+  padding-top: 69px;
   padding-bottom: 76px;
   margin: 0;
 }
@@ -19,6 +19,28 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+
+  &:hover .catalog__item-card {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .catalog__item-card {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.catalog__video {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 57px;
+
+  &:hover .catalog__video-card {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .catalog__video-card {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog__item-title {
@@ -40,7 +62,48 @@
   }
 }
 
-.catalog__item-image {
+.catalog__video-player {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .catalog__button-play {
+    width: 120px;
+    height: 91px;
+    margin-top: -46px;
+    margin-left: -60px;
+    transition: all 0.3s ease-out;
+  }
+
+  &:active .catalog__button-play {
+    width: 80px;
+    height: 61px;
+    margin-top: -30px;
+    margin-left: -40px;
+    opacity: 0.3;
+    transition: all 0.05s ease-out;
+  }
+}
+
+.catalog__video-title {
+  position: relative;
+  font-size: 17px;
+  line-height: 24px;
+  color: $font-black;
+  margin: 0;
+  border: solid 1px $shadow;
+  border-bottom: none;
+  padding-top: 24px;
+  padding-bottom: 23px;
+  padding-left: 90px;
+  padding-right: 35px;
+  background-image: url("../img/icon-video.svg");
+  background-repeat: no-repeat;
+  background-position-x: 33px;
+  background-position-y: center;
+}
+
+.catalog__item-image,
+.catalog__video-image {
   display: block;
   width: 100%;
   height: auto;
@@ -52,6 +115,14 @@
   color: $base-grey;
   margin: 0;
   margin-bottom: 19px;
+}
+
+.catalog__video-description {
+  font-size: 13px;
+  line-height: 24px;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .catalog__item-buy {
@@ -98,14 +169,34 @@
   order: 1;
   padding: 27px;
   padding-top: 23px;
+}
 
-  &:hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
+.catalog__video-card {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px $shadow;
+  border-top: none;
+  padding: 33px;
+  padding-top: 27px;
+  padding-bottom: 32px;
+}
 
-  &:active {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-  }
+.catalog__button-play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -38px;
+  left: 50%;
+  margin-left: -50px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 76px;
+  transition: all 0.3s ease-out;
 }
 
 @media (min-width: $tablet-width) {
@@ -133,7 +224,7 @@
 
   .catalog__item {
     flex-direction: row;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   .catalog__item-card {
@@ -156,6 +247,41 @@
 
   .catalog__item-price {
     font-size: 17px;
+  }
+
+  .catalog__video {
+    position: relative;
+    margin-bottom: 63px;
+  }
+
+  .catalog__video-card {
+    padding: 40px;
+    padding-top: 94px;
+    padding-bottom: 45px;
+    flex-shrink: 0;
+    height: 148px;
+  }
+
+  .catalog__video-title {
+    position: absolute;
+    border: none;
+    font-size: 20px;
+    bottom: 202px;
+    left: 17px;
+    background-position-x: 25px;
+  }
+
+  .catalog__video-description {
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .catalog__item-image {
+    height: 334px;
+    width: 334px;
   }
 }
 
@@ -181,6 +307,7 @@
   .catalog__item {
     flex-direction: column;
     width: 315px;
+    margin-bottom: 57px;
   }
 
   .catalog__item-card {
@@ -190,5 +317,35 @@
 
   .catalog__item-buy {
     margin-left: 0;
+  }
+
+  .catalog__video {
+    flex-direction: row;
+    margin-bottom: 106px;
+  }
+
+  .catalog__video-title {
+    padding: 0;
+    padding-top: 53px;
+    background-position-x: 2px;
+    background-position-y: top;
+    width: 150px;
+    left: 760px;
+    top: 42px;
+  }
+
+  .catalog__video-image {
+    width: 682px;
+  }
+
+  .catalog__video-card {
+    flex-shrink: 1;
+    height: auto;
+    border-top: solid 1px $shadow;
+    border-left: none;
+    padding-top: 177px;
+    padding-left: 78px;
+    padding-bottom: 59px;
+    padding-right: 56px;
   }
 }

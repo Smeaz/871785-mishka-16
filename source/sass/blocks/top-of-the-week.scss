@@ -1,12 +1,9 @@
 .top-of-the-week {
+  @include zigzag-line;
   display: flex;
   flex-direction: column;
   padding-top: 29px;
   padding-bottom: 40px;
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-position-y: bottom;
-  background-size: auto 6px;
 }
 
 .top-of-the-week__wrapper {
@@ -87,7 +84,6 @@
   .top-of-the-week {
     padding-top: 50px;
     min-height: 500px;
-    background-size: auto 15px;
     padding-bottom: 68px;
   }
 
@@ -139,7 +135,6 @@
 @media (min-width: $desktop-width) {
   .top-of-the-week {
     padding-top: 128px;
-    background-size: auto 23px;
     padding-bottom: 95px;
     width: 1050px;
     margin-left: auto;

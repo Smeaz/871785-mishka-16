@@ -3,6 +3,7 @@
   border: solid 2px $base-grey;
   background-color: transparent;
   text-transform: uppercase;
+  text-align: center;
   color: $base-grey;
   font-size: 17px;
   font-weight: bold;
@@ -15,7 +16,7 @@
     background-color: $base-grey;
   }
 
-  &:focus {
+  &:active {
     color: rgba($font-white, 0.3);
     background-color: $base-grey;
   }

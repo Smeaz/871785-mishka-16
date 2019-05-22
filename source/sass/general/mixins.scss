@@ -69,3 +69,18 @@
     max-width: 1050px;
   }
 }
+
+@mixin zigzag-line {
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  background-size: auto 6px;
+
+  @media (min-width: $tablet-width) {
+    background-size: auto 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: auto 23px;
+  }
+}
