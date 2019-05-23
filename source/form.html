@@ -60,6 +60,99 @@
       </div>
     </header>
     <main class="page-main">
+      <section class="knitting">
+        <h2 class="knitting__title">Вязание на заказ</h2>
+        <div class="knitting__wrapper">
+          <p class="knitting__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        </div>
+        <form class="knitting__order" method="get" action="https://echo.htmlacademy.ru">
+          <div class="knitting__fieldset-wrapper">
+            <fieldset class="knitting__type">
+              <legend>Тип</legend>
+              <ul class="knitting__type-options">
+                <li class="knitting__type-option">
+                  <input class="visually-hidden knitting__type-input" type="radio" name="interior" value="for interior" id="for-interior" checked>
+                  <label for="for-interior">Аксессуар для интерьера</label>
+                </li>
+                <li class="knitting__type-option">
+                  <input class="visually-hidden knitting__type-input" type="radio" name="toy" value="childrens toy" id="childrens-toy">
+                  <label for="childrens-toy">Детская игрушка</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="knitting__fieldset-wrapper">
+            <fieldset class="knitting__color">
+              <legend>Цвет</legend>
+              <ul class="knitting__color-options">
+                <li class="knitting__color-option">
+                  <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="white" id="color-white" checked>
+                  <label for="color-white">Белый</label>
+                </li>
+                <li class="knitting__color-option">
+                  <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="grey" id="color-grey" checked>
+                  <label for="color-grey">Серый</label>
+                </li>
+                <li class="knitting__color-option">
+                  <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="tiffany" id="color-tiffany">
+                  <label for="color-tiffany">«Тиффани»</label>
+                </li>
+                <li class="knitting__color-option">
+                  <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="black" id="color-black">
+                  <label for="color-black">Черный</label>
+                </li>
+                <li class="knitting__color-option">
+                  <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="pink" id="color-pink">
+                  <label for="color-pink">Розовый</label>
+                </li>
+                <li class="knitting__color-option">
+                  <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="orange" id="color-orange">
+                  <label for="color-orange">Оранжевый</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="knitting__fieldset-wrapper">
+            <fieldset class="knitting__fullname">
+              <legend>ФИО</legend>
+              <ul class="knitting__fullname-inputs">
+                <li class="knitting__fullname-input">
+                  <label for="first-name">Имя:</label>
+                  <input id="first-name" type="text" name="first-name-input" required placeholder="Введите ваше имя*">
+                </li>
+                <li class="knitting__fullname-input">
+                  <label for="last-name">Фамилия:</label>
+                  <input id="last-name" type="text" name="last-name-input" required placeholder="Укажите фамилию*">
+                </li>
+                <li class="knitting__fullname-input">
+                  <label for="patronymic">Отчество:</label>
+                  <input id="patronymic" type="text" name="patronymic-input" placeholder="Отчество, если желаете">
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="knitting__fieldset-wrapper">
+            <fieldset class="knitting__phone">
+              <legend>Тел</legend>
+              <input id="phone" type="tel" name="phone-input" required placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            </fieldset>
+            <fieldset class="knitting__email">
+              <legend>e-mail</legend>
+              <input id="email" type="email" name="email-input" required placeholder="Ваш Email*">
+            </fieldset>
+          </div>
+          <div class="knitting__fieldset-wrapper">
+            <fieldset class="knitting__additional">
+              <legend>Доп</legend>
+              <textarea id="additional" name="additional-input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </fieldset>
+          </div>
+          <div class="knitting__wrapper">
+            <span class="knitting__note">*Поля обязательны для заполнения</span>
+            <button class="button knitting__submit" type="submit">Отправить заказ</button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

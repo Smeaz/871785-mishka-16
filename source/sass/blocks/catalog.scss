@@ -1,9 +1,13 @@
 .catalog__title {
   @include main-h1;
-  background-color: #f1f1f1;
+  background-color: $base-grey-2;
   padding-top: 69px;
   padding-bottom: 76px;
   margin: 0;
+
+  &::after {
+    @include zigzag-pseudo;
+  }
 }
 
 .catalog__wrapper {
@@ -208,18 +212,6 @@
     padding-top: 93px;
     padding-bottom: 81px;
     position: relative;
-
-    &::after {
-      display: block;
-      content: "";
-      height: 9px;
-      width: 100%;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-repeat: repeat-x;
-      background-size: auto 22px;
-      position: absolute;
-      bottom: 0;
-    }
   }
 
   .catalog__item {
@@ -292,11 +284,6 @@
 
   .catalog__title {
     padding-bottom: 104px;
-
-    &::after {
-      height: 15px;
-      background-size: auto 36px;
-    }
   }
 
   .catalog__list {

@@ -84,3 +84,22 @@
     background-size: auto 23px;
   }
 }
+
+@mixin zigzag-pseudo {
+  @media (min-width: $tablet-width) {
+    display: block;
+    content: "";
+    height: 9px;
+    width: 100%;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: auto 22px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 15px;
+    background-size: auto 36px;
+  }
+}
