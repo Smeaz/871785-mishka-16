@@ -23,7 +23,7 @@
   font-size: 13px;
   text-align: left;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 19px;
 }
 
 .knitting__order fieldset {
@@ -52,12 +52,16 @@
   margin-bottom: 36px;
 }
 
-.knitting__type {
-  margin-bottom: 20px;
+.knitting__type-wrapper {
+  padding-bottom: 16px;
+}
+
+.knitting__color-wrapper {
+  padding-bottom: 2px;
 }
 
 .knitting__color {
-  margin-bottom: 2px;
+  padding-bottom: 2px;
 }
 
 .knitting__legend {
@@ -169,6 +173,7 @@
 .knitting__email {
   margin-top: 11px;
   margin-bottom: 31px;
+  position: relative;
 }
 
 .knitting__email input,
@@ -257,6 +262,30 @@
   display: block;
 }
 
+.knitting__input-icon {
+  position: absolute;
+  fill: #000000;
+  opacity: 0.2;
+
+  &--phone {
+    top: 8px;
+    right: 8px;
+  }
+
+  &--email {
+    top: 9px;
+    right: 4px;
+  }
+}
+
+.knitting__input-email:hover + .knitting__input-icon--email,
+.knitting__input-phone:hover + .knitting__input-icon--phone,
+.knitting__input-email:focus + .knitting__input-icon--email,
+.knitting__input-phone:focus + .knitting__input-icon--phone {
+  opacity: 1;
+  fill: $form-green;
+}
+
 @media (min-width: $tablet-width) {
   .knitting__title {
     padding-top: 93px;
@@ -274,6 +303,43 @@
     line-height: 30px;
   }
 
+  .knitting__legend,
+  .knitting span {
+    width: auto;
+  }
+
+  .knitting__type {
+    margin-bottom: 11px;
+  }
+
+  .knitting__type-wrapper {
+    padding-top: 54px;
+    padding-bottom: 0;
+    display: flex;
+  }
+
+  .knitting__color-wrapper {
+    padding-top: 63px;
+    padding-bottom: 13px;
+    display: flex;
+  }
+
+  .knitting__color-options {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .knitting__color-option {
+    width: 38%;
+    margin-bottom: 51px;
+  }
+
+  .knitting__type-option {
+    margin-bottom: 56px;
+  }
+
   .knitting__order label {
     font-size: 19px;
   }
@@ -282,6 +348,39 @@
     &::before {
       display: none;
     }
+
+    &--type {
+      padding-right: 22%;
+    }
+
+    &--color {
+      margin-top: 4px;
+      padding-right: 21%;
+    }
+  }
+
+  .knitting__type-input + label {
+    &::before {
+      width: 52px;
+      height: 52px;
+      left: -80px;
+      top: -12px;
+    }
+
+    &::after {
+      width: 22px;
+      height: 22px;
+      left: -64px;
+      top: 3px;
+    }
+  }
+
+  .knitting__color-input + label::before,
+  .knitting__color-input + label::after {
+    width: 52px;
+    height: 52px;
+    left: -79px;
+    top: -12px;
   }
 
   .knitting__legend span {
