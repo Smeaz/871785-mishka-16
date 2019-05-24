@@ -190,7 +190,6 @@
 }
 
 .knitting__type-input + label {
-
   &::before {
     @include pseudo-icon;
     width: 40px;
@@ -230,7 +229,6 @@
 }
 
 .knitting__color-input + label {
-
   &::before {
     @include pseudo-icon;
     width: 40px;
@@ -281,7 +279,6 @@
   }
 
   .knitting__legend {
-
     &::before {
       display: none;
     }
