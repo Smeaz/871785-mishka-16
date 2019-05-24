@@ -68,14 +68,14 @@
         <form class="knitting__order" method="get" action="https://echo.htmlacademy.ru">
           <div class="knitting__fieldset-wrapper">
             <fieldset class="knitting__type">
-              <legend>Тип</legend>
+              <legend class="knitting__legend"><span>Тип</span></legend>
               <ul class="knitting__type-options">
                 <li class="knitting__type-option">
-                  <input class="visually-hidden knitting__type-input" type="radio" name="interior" value="for interior" id="for-interior" checked>
+                  <input class="visually-hidden knitting__type-input" type="radio" name="knitting-type" value="for interior" id="for-interior" checked>
                   <label for="for-interior">Аксессуар для интерьера</label>
                 </li>
                 <li class="knitting__type-option">
-                  <input class="visually-hidden knitting__type-input" type="radio" name="toy" value="childrens toy" id="childrens-toy">
+                  <input class="visually-hidden knitting__type-input" type="radio" name="knitting-type" value="childrens toy" id="childrens-toy">
                   <label for="childrens-toy">Детская игрушка</label>
                 </li>
               </ul>
@@ -83,7 +83,7 @@
           </div>
           <div class="knitting__fieldset-wrapper">
             <fieldset class="knitting__color">
-              <legend>Цвет</legend>
+              <legend class="knitting__legend"><span>Цвет</span></legend>
               <ul class="knitting__color-options">
                 <li class="knitting__color-option">
                   <input class="visually-hidden knitting__color-input" type="checkbox" name="product-color" value="white" id="color-white" checked>
@@ -114,7 +114,7 @@
           </div>
           <div class="knitting__fieldset-wrapper">
             <fieldset class="knitting__fullname">
-              <legend>ФИО</legend>
+              <legend class="knitting__legend"><span>ФИО</span></legend>
               <ul class="knitting__fullname-inputs">
                 <li class="knitting__fullname-input">
                   <label for="first-name">Имя:</label>
@@ -133,17 +133,17 @@
           </div>
           <div class="knitting__fieldset-wrapper">
             <fieldset class="knitting__phone">
-              <legend>Тел</legend>
+              <legend class="knitting__legend"><span>Тел</span></legend>
               <input id="phone" type="tel" name="phone-input" required placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             </fieldset>
             <fieldset class="knitting__email">
-              <legend>e-mail</legend>
+              <legend class="knitting__legend"><span>e-mail</span></legend>
               <input id="email" type="email" name="email-input" required placeholder="Ваш Email*">
             </fieldset>
           </div>
           <div class="knitting__fieldset-wrapper">
             <fieldset class="knitting__additional">
-              <legend>Доп</legend>
+              <legend class="knitting__legend"><span>Доп</span></legend>
               <textarea id="additional" name="additional-input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
           </div>

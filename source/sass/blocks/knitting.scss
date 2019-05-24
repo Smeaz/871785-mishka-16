@@ -60,7 +60,7 @@
   margin-bottom: 2px;
 }
 
-.knitting__order legend {
+.knitting__legend {
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
@@ -69,22 +69,54 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  margin-bottom: 34px;
 
-  &::after {
+  &::before {
     @include pseudo-icon;
     height: 1px;
-    width: 76%;
+    width: 100%;
     background-color: $base-green;
     top: 10px;
     right: 0;
+    z-index: -1;
   }
+}
+
+.knitting__legend span {
+  display: inline-block;
+  background-color: white;
+  width: 62px;
+}
+
+.knitting__email span {
+  width: 81px;
+}
+
+.knitting__type legend,
+.knitting__color legend,
+.knitting__fullname legend {
+  margin-bottom: 34px;
+}
+
+.knitting__phone legend,
+.knitting__email legend {
+  margin-bottom: 11px;
+}
+
+.knitting__additional legend {
+  margin-bottom: 27px;
 }
 
 .knitting__order label {
   font-size: 17px;
   font-weight: bold;
   color: #000000;
+}
+
+.knitting__color label,
+.knitting__type label {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
 }
 
 .knitting__order input::placeholder,
@@ -94,15 +126,18 @@
   color: rgba(68, 68, 68, 0.3);
 }
 
-.knitting__order input[type="tel"]::placeholder {
+.knitting__phone input::placeholder {
   font-size: 19px;
 }
 
 .knitting__order input[type="text"],
 .knitting__order input[type="tel"],
 .knitting__order input[type="email"] {
+  padding-top: 13px;
+  padding-bottom: 17px;
   border: none;
   border-bottom: 2px solid black;
+  box-sizing: border-box;
 
   &:hover,
   &:focus {
@@ -113,6 +148,10 @@
 .knitting__additional textarea {
   resize: none;
   border: 2px solid black;
+  box-sizing: border-box;
+  padding: 14px;
+  height: 142px;
+  margin-bottom: 10px;
 
   &:hover,
   &:focus {
@@ -123,6 +162,13 @@
 .knitting__fullname-input {
   display: flex;
   flex-direction: column;
+  margin-bottom: 19px;
+}
+
+.knitting__phone,
+.knitting__email {
+  margin-top: 11px;
+  margin-bottom: 31px;
 }
 
 .knitting__email input,
@@ -134,8 +180,8 @@
 
 .knitting__submit {
   width: 100%;
-  margin-bottom: 55px;
-  margin-top: 30px;
+  margin-bottom: 54px;
+  margin-top: 27px;
 }
 
 .knitting__note {
@@ -143,11 +189,82 @@
   line-height: 16px;
 }
 
+.knitting__type-input + label {
+
+  &::before {
+    @include pseudo-icon;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $base-grey;
+    box-sizing: border-box;
+    border-radius: 50%;
+    left: -63px;
+    top: -6px;
+  }
+
+  &::after {
+    @include pseudo-icon;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $form-green;
+    left: -51px;
+    top: 6px;
+    display: none;
+  }
+}
+
+.knitting__type-input:checked + label::after {
+  display: block;
+}
+
+.knitting__type-input:hover + label::before,
+.knitting__color-input:hover + label::before {
+  border-color: $form-green;
+}
+
+.knitting__type-input:active + label::before,
+.knitting__color-input:active + label::before {
+  border-color: $base-grey;
+  opacity: 0.3;
+}
+
+.knitting__color-input + label {
+
+  &::before {
+    @include pseudo-icon;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $base-grey;
+    box-sizing: border-box;
+    left: -63px;
+    top: -9px;
+  }
+
+  &::after {
+    @include pseudo-icon;
+    width: 40px;
+    height: 40px;
+    left: -63px;
+    top: -9px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 66%;
+    display: none;
+  }
+}
+
+.knitting__color-input:checked + label::after {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .knitting__title {
     padding-top: 93px;
     padding-bottom: 81px;
     position: relative;
+    margin-bottom: 73px;
   }
 
   .knitting__fieldset-wrapper:nth-child(even) {
@@ -163,11 +280,15 @@
     font-size: 19px;
   }
 
-  .knitting__order legend {
+  .knitting__legend {
 
-    &::after {
+    &::before {
       display: none;
     }
+  }
+
+  .knitting__legend span {
+    background-color: transparent;
   }
 
   .knitting__order input::placeholder,
