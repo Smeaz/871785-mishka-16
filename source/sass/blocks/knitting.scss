@@ -1,9 +1,14 @@
 .knitting__wrapper {
   @include wrapper;
+  position: relative;
 }
 
 .knitting__fieldset-wrapper {
   @include wrapper;
+
+  &--communication {
+    padding-top: 7px;
+  }
 }
 
 .knitting__title {
@@ -56,10 +61,6 @@
   padding-bottom: 16px;
 }
 
-.knitting__color-wrapper {
-  padding-bottom: 2px;
-}
-
 .knitting__color {
   padding-bottom: 2px;
 }
@@ -83,6 +84,21 @@
     right: 0;
     z-index: -1;
   }
+
+  &--type,
+  &--color,
+  &--fullname {
+    margin-bottom: 34px;
+  }
+
+  &--phone,
+  &--email {
+    margin-bottom: 11px;
+  }
+
+  &--additional {
+    margin-bottom: 25px;
+  }
 }
 
 .knitting__legend span {
@@ -93,21 +109,6 @@
 
 .knitting__email span {
   width: 81px;
-}
-
-.knitting__type legend,
-.knitting__color legend,
-.knitting__fullname legend {
-  margin-bottom: 34px;
-}
-
-.knitting__phone legend,
-.knitting__email legend {
-  margin-bottom: 11px;
-}
-
-.knitting__additional legend {
-  margin-bottom: 27px;
 }
 
 .knitting__order label {
@@ -142,6 +143,8 @@
   border: none;
   border-bottom: 2px solid black;
   box-sizing: border-box;
+  font-size: 19px;
+  line-height: 18px;
 
   &:hover,
   &:focus {
@@ -149,13 +152,15 @@
   }
 }
 
-.knitting__additional textarea {
+.knitting__textarea {
   resize: none;
   border: 2px solid black;
   box-sizing: border-box;
   padding: 14px;
   height: 142px;
   margin-bottom: 10px;
+  font-size: 19px;
+  line-height: 18px;
 
   &:hover,
   &:focus {
@@ -171,14 +176,13 @@
 
 .knitting__phone,
 .knitting__email {
-  margin-top: 11px;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
   position: relative;
 }
 
-.knitting__email input,
-.knitting__phone input,
-.knitting__additional textarea {
+.knitting__input-email,
+.knitting__input-phone,
+.knitting__textarea {
   width: 100%;
   background-color: transparent;
 }
@@ -268,12 +272,12 @@
   opacity: 0.2;
 
   &--phone {
-    top: 8px;
+    top: 38px;
     right: 8px;
   }
 
   &--email {
-    top: 9px;
+    top: 37px;
     right: 4px;
   }
 }
@@ -324,6 +328,41 @@
     display: flex;
   }
 
+  .knitting__fullname-wrapper {
+    padding-top: 67px;
+    padding-bottom: 39px;
+    display: flex;
+  }
+
+  .knitting__phone-wrapper,
+  .knitting__email-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .knitting__order .knitting__fullname-inputs {
+    width: 100%;
+    margin-top: -29px;
+  }
+
+  .knitting__fullname-input {
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+
+  .knitting__fullname-inputs input[type="text"] {
+    flex-grow: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 17px;
+  }
+
+  .knitting__fullname-inputs label {
+    padding-right: 24px;
+  }
+
   .knitting__color-options {
     flex-grow: 1;
     display: flex;
@@ -344,18 +383,37 @@
     font-size: 19px;
   }
 
+  .knitting__legend span {
+    width: 75px;
+  }
+
   .knitting__legend {
     &::before {
       display: none;
     }
 
     &--type {
-      padding-right: 22%;
+      padding-right: 16%;
     }
 
     &--color {
       margin-top: 4px;
-      padding-right: 21%;
+      padding-right: 16%;
+    }
+
+    &--fullname {
+      padding-right: 14%;
+    }
+
+    &--phone,
+    &--email {
+      margin-bottom: 4px;
+      padding-right: 14%;
+    }
+
+    &--additional {
+      margin-top: 16px;
+      padding-right: 14%;
     }
   }
 
@@ -379,7 +437,7 @@
   .knitting__color-input + label::after {
     width: 52px;
     height: 52px;
-    left: -79px;
+    left: -77px;
     top: -12px;
   }
 
@@ -387,20 +445,138 @@
     background-color: transparent;
   }
 
+  .knitting__fieldset-wrapper--communication {
+    padding-top: 52px;
+    padding-bottom: 24px;
+  }
+
+  .knitting__email,
+  .knitting__phone {
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+  .knitting__input-email,
+  .knitting__input-phone {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .knitting__input-icon {
+    &--phone {
+      top: 8px;
+      right: 26px;
+    }
+
+    &--email {
+      top: 9px;
+      right: 22px;
+    }
+  }
+
   .knitting__order input::placeholder,
   .knitting__order textarea::placeholder {
     font-size: 19px;
   }
 
+  .knitting__additional-wrapper {
+    display: flex;
+    padding-top: 50px;
+  }
+
   .knitting__note {
     font-size: 17px;
     line-height: 30px;
+    position: absolute;
+    right: 50px;
+    top: 9px;
+  }
+
+  .knitting__submit {
+    width: 230px;
+    margin-top: 42px;
+    margin-bottom: 50px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .knitting__title {
     padding-bottom: 104px;
+    margin-bottom: 120px;
+  }
+
+  .knitting__description {
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .knitting__legend {
+    &--type {
+      padding-left: 64px;
+      padding-right: 53px;
+    }
+
+    &--color {
+      padding-left: 60px;
+      padding-right: 55px;
+    }
+
+    &--fullname {
+      padding-left: 61px;
+      padding-right: 41px;
+    }
+
+    &--phone,
+    &--email {
+      padding-left: 62px;
+      padding-right: 38px;
+    }
+
+    &--additional {
+      padding-left: 63px;
+      padding-right: 37px;
+    }
+  }
+
+  .knitting__color-options {
+    justify-content: flex-start;
+  }
+
+  .knitting__color-option {
+    width: 264px;
+  }
+
+  .knitting__order .knitting__fullname-inputs {
+    width: 698px;
+  }
+
+  .knitting__input-phone,
+  .knitting__input-email {
+    width: 700px;
+  }
+
+  .knitting__input-icon {
+    &--phone {
+      right: 183px;
+    }
+
+    &--email {
+      right: 179px;
+    }
+  }
+
+  .knitting__textarea {
+    width: 700px;
+    margin-bottom: 7px;
+  }
+
+  .knitting__submit {
+    margin-left: 175px;
+    margin-bottom: 49px;
+  }
+
+  .knitting__note {
+    right: 223px;
   }
 
   .knitting__fieldset-wrapper {

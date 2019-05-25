@@ -39,12 +39,14 @@
               <a class="site-list__link site-list__link--sale" href="sale.html">Распродажа</a>
             </li>
             <li class="site-list__item site-list__item--search">
-              <label class="site-list__search-label" for="search-input">
-                <input class="site-list__search-input" type="text" id="search-input" name="site-search" placeholder="Поиск по сайту">
-                <svg class="site-list__search-image" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
-                  <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
-                </svg>
-              </label>
+              <form class="site-list__search-form" action="https://echo.htmlacademy.ru">
+                <label class="site-list__search-label" for="search-input">
+                  <input class="site-list__search-input" type="text" id="search-input" name="site-search" placeholder="Поиск по сайту">
+                  <svg class="site-list__search-image" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                    <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                  </svg>
+                </label>
+              </form>
             </li>
             <li class="site-list__item site-list__item--cart">
               <a class="site-list__link site-list__link--cart" href="cart.html">
@@ -102,7 +104,7 @@
               <img class="top-of-the-week__picture" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Корзинки">
             </picture>
             <span class="top-of-the-week__price">Цена: 990 руб.</span>
-            <button class="top-of-the-week__button button">Заказать</button>
+            <button class="top-of-the-week__button button button--order">Заказать</button>
           </div>
         </div>
       </section>
@@ -136,7 +138,7 @@
         </div>
       </section>
       <section class="contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper contacts__wrapper--1">
           <h3 class="contacts__title">Контакты</h3>
           <table class="contacts__contact-info">
             <tr>
@@ -148,7 +150,21 @@
               <td>г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</td>
             </tr>
           </table>
+        </div>
+        <div class="contacts__wrapper contacts__wrapper--2">
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1558572273000!5m2!1sru!2sru" allowfullscreen></iframe>
+          <div class="contacts__map-image-pin map-show">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Магазин на карте">
+            </picture>
+          </div>
+        </div>
+        <div class="contacts__wrapper contacts__wrapper--3">
           <button class="button contacts__write-us">Напишите нам</button>
         </div>
       </section>
@@ -217,6 +233,32 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h4 class="modal__title">Добавить в&nbsp;корзину</h4>
+        <span class="modal__choose-size">Выберите размер:</span>
+        <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <ul class="modal__sizes">
+              <li class="modal__size">
+                <input class="visually-hidden modal__input" type="radio" name="product-size" value="S" id="size-s" checked>
+                <label for="size-s">S</label>
+              </li>
+              <li class="modal__size">
+                <input class="visually-hidden modal__input" type="radio" name="product-size" value="M" id="size-m">
+                <label for="size-m">M</label>
+              </li>
+              <li class="modal__size">
+                <input class="visually-hidden modal__input" type="radio" name="product-size" value="L" id="size-l">
+                <label for="size-l">L</label>
+              </li>
+            </ul>
+            <button class="modal__submit" type="submit">Добавить</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <div class="modal__block"></div>
     <script src="js/script.min.js"></script>
   </body>
 </html>
