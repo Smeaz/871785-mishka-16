@@ -143,13 +143,10 @@
 
   .site-list__search-input {
     margin: 0;
+    opacity: 0;
 
     &:focus ~ .site-list__search-image {
       opacity: 0;
-    }
-
-    &::placeholder {
-      color: transparent;
     }
   }
 
