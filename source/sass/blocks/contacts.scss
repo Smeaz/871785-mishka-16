@@ -74,16 +74,6 @@
 
 .contacts__map-image-pin {
   display: none;
-
-  // &::after {
-  //   @include pseudo-icon;
-  //   width: 66px;
-  //   height: 101px;
-  //   background-image: url("../img/icon-map-pin.svg");
-  //   background-repeat: no-repeat;
-  //   right: 36%;
-  //   bottom: 38%;
-  // }
 }
 
 .contacts__map-show {
@@ -152,13 +142,6 @@
   .contacts__map-image {
     margin-bottom: 54px;
   }
-
-  // .contacts__map-image-pin {
-  //   &::after {
-  //     top: 48%;
-  //     left: 47%;
-  //   }
-  // }
 
   .contacts__write-us {
     width: 230px;
