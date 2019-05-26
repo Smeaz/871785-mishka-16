@@ -7,7 +7,7 @@
 .contacts__wrapper {
   @include wrapper;
 
-  &--2 {
+  &--map {
     padding: 0;
     max-width: 100%;
   }
@@ -75,18 +75,18 @@
 .contacts__map-image-pin {
   display: none;
 
-  &::after {
-    @include pseudo-icon;
-    width: 66px;
-    height: 101px;
-    background-image: url("../img/icon-map-pin.svg");
-    background-repeat: no-repeat;
-    right: 36%;
-    bottom: 38%;
-  }
+  // &::after {
+  //   @include pseudo-icon;
+  //   width: 66px;
+  //   height: 101px;
+  //   background-image: url("../img/icon-map-pin.svg");
+  //   background-repeat: no-repeat;
+  //   right: 36%;
+  //   bottom: 38%;
+  // }
 }
 
-.map-show {
+.contacts__map-show {
   display: block;
 }
 
@@ -153,12 +153,12 @@
     margin-bottom: 54px;
   }
 
-  .contacts__map-image-pin {
-    &::after {
-      top: 48%;
-      left: 47%;
-    }
-  }
+  // .contacts__map-image-pin {
+  //   &::after {
+  //     top: 48%;
+  //     left: 47%;
+  //   }
+  // }
 
   .contacts__write-us {
     width: 230px;
@@ -177,7 +177,7 @@
     max-width: 825px;
     padding-left: 175px;
 
-    &--2 {
+    &--map {
       position: relative;
       width: 824px;
     }
@@ -217,14 +217,14 @@
     bottom: -107px;
   }
 
-  .contacts__map-image-pin {
-    &::after {
-      right: 195px;
-      bottom: 158px;
-      top: auto;
-      left: auto;
-    }
-  }
+  // .contacts__map-image-pin {
+  //   &::after {
+  //     right: 195px;
+  //     bottom: 158px;
+  //     top: auto;
+  //     left: auto;
+  //   }
+  // }
 
   .contacts__write-us {
     margin: 0;

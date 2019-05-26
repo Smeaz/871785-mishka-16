@@ -47,24 +47,17 @@
   padding: 0;
   background-color: transparent;
 
-  &:hover {
-    background-blend-mode: color;
-    background-color: rgba(255, 255, 255, 0.4);
+  &:hover svg {
+    opacity: 0.6;
   }
 
-  &:active {
-    background-blend-mode: color;
-    background-color: rgba(255, 255, 255, 0.7);
+  &:active svg {
+    opacity: 0.3;
   }
 }
 
 .reviews__button--left {
-  background-image: url("../img/icon-left-arrow.svg");
   border-right-color: white;
-}
-
-.reviews__button--right {
-  background-image: url("../img/icon-right-arrow.svg");
 }
 
 .reviews__write {

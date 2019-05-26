@@ -26,6 +26,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -66,7 +67,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("uglifyjs", function () {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/script.js")
     .pipe(uglify())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"));
@@ -84,7 +85,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("uglifyjs", "refresh"));
+  gulp.watch("source/js/script.js", gulp.series("uglifyjs", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
