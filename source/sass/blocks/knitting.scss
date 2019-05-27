@@ -177,6 +177,10 @@
 .knitting__phone,
 .knitting__email {
   margin-bottom: 29px;
+}
+
+.knitting__phone-wrapper,
+.knitting__email-wrapper {
   position: relative;
 }
 
@@ -277,7 +281,7 @@
   }
 
   &--email {
-    top: 8px;
+    top: 9px;
     right: 4px;
   }
 }
@@ -460,6 +464,7 @@
 
   .knitting__email,
   .knitting__phone {
+    position: relative;
     margin-top: 0;
     margin-bottom: 26px;
   }
@@ -521,15 +526,15 @@
 
   .knitting__legend {
     &--type {
-      left: 114px;
+      left: 64px;
     }
 
     &--color {
-      left: 110px;
+      left: 60px;
     }
 
     &--fullname {
-      left: 111px;
+      left: 61px;
     }
 
     &--phone,
@@ -538,8 +543,12 @@
     }
 
     &--additional {
-      left: 113px;
+      left: 62px;
     }
+  }
+
+  .knitting__order fieldset {
+    position: relative;
   }
 
   .knitting__order ul {
