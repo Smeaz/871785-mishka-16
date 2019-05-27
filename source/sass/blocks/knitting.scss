@@ -549,6 +549,9 @@
 
   .knitting__order fieldset {
     position: relative;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .knitting__order ul {
@@ -608,11 +611,5 @@
 
   .knitting__fieldset-wrapper {
     max-width: 100%;
-  }
-
-  .knitting__order fieldset {
-    max-width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
